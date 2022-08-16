@@ -8,8 +8,10 @@ API helps format data from various sources into two-dimensional array with field
 
 You will be able to format data from:
 
-* **ArcGIS** (json).
-* **Socrata** (json).
+* **ArcGIS** (in json format)
+* **Socrata** (in json format)
+* **GeoJSON** (not implemented yet)
+* **CSV** (not implemented yet)
 """
 
 tags_metadata = [
@@ -33,7 +35,7 @@ tags_metadata = [
 
 
 app = FastAPI(
-    title="Return Two-Dimensional Array",
+    title="Return 2Dim Array",
     description=description,
     version="1.0.0",
     terms_of_service="https://www.blank.org/",
