@@ -4,9 +4,7 @@ from .routers import socrata, arcgis
 description = """
 API helps format data from various sources into two-dimensional array with field types for schema generation.
 
-## Data Sources
-
-You will be able to format data from:
+## Compatible Data Sources
 
 * **ArcGIS**  -  in json format
 * **Socrata**  -  in json format
