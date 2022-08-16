@@ -1,4 +1,5 @@
 import requests
+import json
 from fastapi import APIRouter
 from ..models import ArcGISRequest, DataResponseModel
 
@@ -55,9 +56,12 @@ def processData(data, fields):
         for field in fields.keys():
             record.append(attributes.get(field, None))
         
+        if wkid:
+                record.append(wkid)
+
         if has_centroid:
             centroid = feature.get("centroid", {})
-            record.append([centroid.get("x", None), centroid.get("y", None)])
+            record.append(json.dumps([centroid.get("x", None), centroid.get("y", None)]))
         
         if has_geometry:
             geometry = feature.get("geometry", {})
@@ -67,10 +71,10 @@ def processData(data, fields):
                     record.append("MultiPolygon")
                 else:
                     record.append("Polygon")
-                record.append(coordinates)
+                record.append(json.dumps(coordinates))
             elif has_xy:
                 record.append("Point")
-                record.append([geometry.get("x", None), geometry.get("y", None)])
+                record.append(json.dumps([geometry.get("x", None), geometry.get("y", None)]))
             else:
                 record.append(None)
                 record.append(None)
