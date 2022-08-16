@@ -8,10 +8,10 @@ API helps format data from various sources into two-dimensional array with field
 
 You will be able to format data from:
 
-* **ArcGIS** (in json format)
-* **Socrata** (in json format)
-* **GeoJSON** (not implemented yet)
-* **CSV** (not implemented yet)
+* **ArcGIS**  -  in json format
+* **Socrata**  -  in json format
+* **GeoJSON**  -  not implemented yet
+* **CSV**  -  not implemented yet
 """
 
 tags_metadata = [
@@ -38,10 +38,9 @@ app = FastAPI(
     title="Return 2Dim Array",
     description=description,
     version="1.0.0",
-    terms_of_service="https://www.blank.org/",
     contact={
         "name": "JBTR Analytics",
-        "url": "https://www.blank.org/",
+        "url": "https://github.com/jbtranalytics/return-2dim-array",
         "email": "jbtranalytics@gmail.com",
     },
     license_info={
