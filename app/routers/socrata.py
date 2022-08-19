@@ -40,8 +40,8 @@ def getFields(raw_fields_data):
 def getResponse(payload: SocrataRequest):
     with requests.Session() as session:
         if payload.username and payload.password:
-            session.auth(payload.username, payload.password)
+            session.auth(payload.username.get_secret_value(), payload.password.get_secret_value())
         if payload.token:
-            session.headers.update({"X-App-Token": payload.token})
+            session.headers.update({"X-App-Token": payload.token.get_secret_value()})
         response = session.get(payload.url, timeout=600)
     return {"data": response.json(), "headers": response.headers}
