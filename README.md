@@ -37,6 +37,17 @@ function Return2DimArray(api_route, url){
 }
 ```
 
+A timed trigger has also ben setup for every 5 minutes to ensure data from function is refreshed
+```js
+function RefreshTrigger(){
+  let ss = SpreadsheetApp.getActiveSpreadsheet()
+  let ws = ss.getSheetByName("setup")
+  let value = ws.getRange("B1").getValue()
+  ws.getRange("B1").setValue(value + 1)
+  ws.getRange("B2").setValue(new Date())
+}
+```
+
 ### Data Studio
 
 Data Studio can then be used to connect to sheet and visualize data.
