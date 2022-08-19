@@ -10,7 +10,7 @@ A demo deployment can be foud on heroku.
 
 * <https://return-2dim-array.herokuapp.com/docs>
 
-## Example Usage #1
+## Example Usage
 ---
 
 ### Google Sheets
@@ -37,7 +37,7 @@ function Return2DimArray(api_route, url){
 }
 ```
 
-A timed trigger has also ben setup for every 5 minutes to ensure data from function is refreshed
+A timed trigger has also ben setup for every 5 minutes to ensure data from function is refreshed. Any function that references `setup!"B1"` will be refreshed with this trigger (see lax_parking).
 ```js
 function RefreshTrigger(){
   let ss = SpreadsheetApp.getActiveSpreadsheet()
@@ -55,5 +55,3 @@ Data Studio can then be used to connect to sheet and visualize data.
 * <https://datastudio.google.com/reporting/f8e7591c-07a7-417c-bc78-2910fbc55bc9>
 
 ![Data Studio LAX Parking](images/data-studio-lax-parking.png)
-
-
