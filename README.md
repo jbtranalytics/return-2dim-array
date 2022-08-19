@@ -2,33 +2,6 @@
 
 API helps format data from various sources into two-dimensional array with field types for schema generation.
 
-## Docker
----
-
-Build image:
-
-`docker build -t twodim .`
-
-Start container:
-
-`docker run -d --name twodim -p 80:80 twodim`
-
-## Google Cloud Platform CI/CD
----
-
-A `cloudbuild.yaml` is provided for CI/CD with Google Cloud Run.
-
-## Demo Deplyment
----
-
-A demo deployment can be foud on heroku.
-
-* <https://return-2dim-array.herokuapp.com/docs>
-
-Demo deployment has free tier limitations.
-
-* https://devcenter.heroku.com/articles/limits
-
 ## Example Usage
 ---
 
@@ -76,4 +49,29 @@ Data Studio can then be used to connect to sheet and visualize data.
 ![Data Studio LAX Parking](images/data-studio-lax-parking.png)
 
 
+## Docker
+---
 
+Build image:
+
+`docker build -t twodim .`
+
+Start container:
+
+`docker run -d --name twodim -p 80:80 twodim`
+
+## Google Cloud Platform CI/CD
+---
+
+A `cloudbuild.yaml` is provided for CI/CD with Google Cloud Run.
+
+## Demo Deplyment
+---
+
+A demo deployment can be foud on heroku.
+
+* <https://return-2dim-array.herokuapp.com/docs>
+
+Demo deployment has free tier limitations.
+
+* https://devcenter.heroku.com/articles/limits
