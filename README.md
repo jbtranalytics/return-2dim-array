@@ -2,6 +2,17 @@
 
 API helps format data from various sources into two-dimensional array with field types for schema generation.
 
+## Demo Deplyment
+---
+
+A demo deployment can be foud on heroku.
+
+* <https://return-2dim-array.herokuapp.com/docs>
+
+Demo deployment has free tier limitations.
+
+* https://devcenter.heroku.com/articles/limits
+
 ## Example Usage
 ---
 
@@ -65,13 +76,3 @@ Start container:
 
 A `cloudbuild.yaml` is provided for CI/CD with Google Cloud Run.
 
-## Demo Deplyment
----
-
-A demo deployment can be foud on heroku.
-
-* <https://return-2dim-array.herokuapp.com/docs>
-
-Demo deployment has free tier limitations.
-
-* https://devcenter.heroku.com/articles/limits
