@@ -13,6 +13,11 @@ Start container:
 
 `docker run -d --name twodim -p 80:80 twodim`
 
+## Google Cloud Platform CI/CD
+---
+
+A `cloudbuild.yaml` is provided for CI/CD with Google Cloud Run.
+
 ## Demo Deplyment
 ---
 
