@@ -2,6 +2,16 @@
 
 API helps format data from various sources into two-dimensional array with field types for schema generation.
 
+## Docker
+---
+
+Build image:
+
+`docker build -t twodim .`
+
+Start container:
+
+`docker run -d --name twodim -p 80:80 twodim`
 
 ## Demo Deplyment
 ---
@@ -9,6 +19,10 @@ API helps format data from various sources into two-dimensional array with field
 A demo deployment can be foud on heroku.
 
 * <https://return-2dim-array.herokuapp.com/docs>
+
+Demo deployment has free tier limitations.
+
+* https://devcenter.heroku.com/articles/limits
 
 ## Example Usage
 ---
@@ -55,3 +69,6 @@ Data Studio can then be used to connect to sheet and visualize data.
 * <https://datastudio.google.com/reporting/f8e7591c-07a7-417c-bc78-2910fbc55bc9>
 
 ![Data Studio LAX Parking](images/data-studio-lax-parking.png)
+
+
+
